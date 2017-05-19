@@ -1,6 +1,5 @@
 <?php
 
-// FRONT CONTROLLER
 
 // 1. Общие настройки
 ini_set('display_errors',1);

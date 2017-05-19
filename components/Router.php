@@ -11,9 +11,6 @@ class Router
         $this->routes = include($routesPath);
     }
 
-    /**
-     * Returns request string
-     */
     private function getURI()
     {
         if (!empty($_SERVER['REQUEST_URI'])) {
@@ -26,13 +23,13 @@ class Router
         // Получить строку запроса
         $uri = $this->getURI();
 
-        // Проверить наличие такого запроса в routes.php
+        // Проверить наличие запроса в routes.php
         foreach ($this->routes as $uriPattern => $path) {
 
             // Сравниваем $uriPattern и $uri
             if (preg_match("~$uriPattern~", $uri)) {
                 
-                // Получаем внутренний путь из внешнего согласно правилу.
+                // Получаем внутренний путь из внешнего
                 $internalRoute = preg_replace("~$uriPattern~", $path, $uri);
                                 
                 // Определить контроллер, action, параметры
