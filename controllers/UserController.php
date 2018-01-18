@@ -40,15 +40,24 @@ class UserController{
                 $result = User::register($name, $email, $password);
 
             }
+
         }
+        if (isset($_POST['submit']) AND $result == true) {
+            $this->actionLogin();
+            return true;
+        }
+
+
         require_once (ROOT . '/views/user/register.php');
         return true;
+
     }
 
     public function actionLogin(){
 
         $email = '';
         $password = '';
+        $permission = '';
 
         if (isset($_POST['submit'])){
             $email = $_POST['email'];
@@ -74,7 +83,7 @@ class UserController{
             }
             else{
                 User::auth($userId);
-                header("Location: /magaz/cabinet/");
+                header("Location: /cabinet/");
             }
         }
         require_once (ROOT . '/views/user/login.php');
@@ -85,6 +94,6 @@ class UserController{
     public function actionLogout(){
         session_start();
         unset($_SESSION['user']);
-        header("Location: /magaz/");
+        header("Location: /");
     }
 }

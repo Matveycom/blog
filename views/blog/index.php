@@ -1,41 +1,24 @@
 
 <?php include  ROOT.'/views/layouts/header.php'; ?>
 
-<section>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-3">
-                <div class="left-sidebar">
-                    <h2>Каталог</h2>
-                    <div class="panel-group category-products">
-                        <?php foreach ($categories as $categoryItem): ?>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a href="/magaz/category/<?php echo $categoryItem['id'];?>">
-                                            <?php echo $categoryItem['name'];?>
-                                        </a>
-                                    </h4>
-                                </div>
-                            </div>
-                        <?php endforeach; ?>
-                    </div>
+        <?php if (User::isGuest() == false)
+            if ($user['permission'] == 1): ?>
+                <div class="article">
+                    <a href="/article/create/">Создать статью</a>
+                    <a href="/article/delete/">Удалить статью</a>
                 </div>
-            </div>
+        <?php endif?>
+                <div class="view">
 
+        <?php foreach ($blog as $blogList):; ?>
+            <h3><a href="/<?php echo $blogList['id']; ?>">
+                <?php echo $blogList['title']; ?></a></h3>
 
-            <div class="col-sm-9 padding-right">
-                <div class="features_items">
-                    <h2 class="title text-center">Блог</h2>
-
-
-                    <a>
-                        Тра ля ля
-
-                    </a>
-
+            <p><?php if(strlen($blogList['content']) >= 300) { echo substr($blogList['content'],
+                        0, strpos($blogList['content'], ' ', 300)).'...';}
+            else echo $blogList['content']?></p>
+            <p><?php echo $blogList['date']; ?></p>
+            <br>
+        <?php endforeach;?>
                 </div>
-            </div>
-        </div>
-</section>
 <?php include  ROOT.'/views/layouts/footer.php'; ?>

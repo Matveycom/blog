@@ -6,10 +6,13 @@ class CabinetController {
         $userId = User::checkLogged();
 
         $user = User::getUserById($userId);
-
+//      if ($user['permission'] == 1){
+//
+//        }
         require_once (ROOT . '/views/cabinet/index.php');
         return true;
     }
+
     public function actionEdit(){
         $userId = User::checkLogged();
 

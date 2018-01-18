@@ -1,0 +1,141 @@
+body{
+    background: #f3f3f3;
+}
+.main {
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    color: white;
+    padding: 0 50px;
+    margin: 10px 10px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0,0,0,.1);
+    transition: .5s;
+    float: left;
+    /*margin-bottom: 50px;*/
+}
+.main:hover { background: rgb(13, 21, 232); } /* при наведении курсора мышки */
+.main:active { background: rgb(23, 5, 152); } /* при нажатии */
+
+.cabinet {
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    color: white;
+    padding: 0 50px;
+    margin: 3px 10px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0,0,0,.1);
+    transition: .5s;
+    text-align: right;
+    margin-left: 450px;
+    float: right;
+
+
+}
+html,body,
+.wrapper {
+    height: 95%;
+}
+.content {
+    box-sizing: border-box;
+    min-height: 100%;
+    padding-bottom: 30px;
+}
+
+.cabinet:hover { background: rgb(13, 21, 232); } /* при наведении курсора мышки */
+.cabinet:active { background: rgb(23, 5, 152); } /* при нажатии */
+.footer {
+    background: #c2c2c2;
+    width: 100%;
+    height: 80px;
+    /*margin: 0 50px;*/
+    /*margin-top: -80px;*/
+    /*display: inline-block;*/
+    /*text-align: center;*/
+}
+.footer-left {
+    text-align: left;
+    float: left;
+    margin-top: 30px;
+    margin-left: 50px;
+    /*padding: 30px 50px;*/
+
+    /*margin: 0 50px;*/
+}
+.footer-right {
+    padding: 30px 50px;
+
+    border-top: 50px;
+    text-align: right;
+    margin-right: 100px;
+
+    /*margin: 30px 200px 50px 100px;*/
+}
+.article a{
+    display: block;
+    /*margin: 40px 70px 20px 50px;*/
+    text-decoration: none;
+    /*outline: none;*/
+    /*display: inline-block;*/
+    color: white;
+    padding: 0 50px;
+    margin: 10px 10px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0,0,0,.1);
+    transition: .5s;
+    text-align: left;
+    /*margin-left: 70px;*/
+    float: left;
+}
+
+.article a:hover { background: rgb(13, 21, 232); } /* при наведении курсора мышки */
+.article a:active { background: rgb(23, 5, 152); } /* при нажатии */
+.view {
+    display: block;
+    margin: 70px;
+}
+.view a {
+    color: #3b2def;
+}
+.create {
+    position: absolute;
+    left: 50px;top: 100px;
+
+    display: inline-block;
+
+    margin-top: 0;
+
+}
+.create input{
+    float: left;
+
+}
+.create textarea{
+    margin: 0;
+    height: 150px;
+    width: 300px;
+    float: left;
+}
+.delete {
+    position: absolute;
+    top: 100px; left: 50px;
+}
+.usercabinet {
+    margin-left: 50px;
+}

@@ -84,12 +84,17 @@ class User{
         $_SESSION['user'] = $userId;
 
     }
-    public static function checkLogged(){
+    public static function userId()
+    {
+        return $_SESSION['user'];
+
+    }
+        public static function checkLogged(){
 
         if (isset($_SESSION['user'])) {
             return$_SESSION['user'];
         }
-        header("Location: /magaz/user/login");
+        header("Location: /user/login");
     }
     public static function isGuest(){
 

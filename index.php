@@ -1,5 +1,6 @@
 <?php
 
+//Victor Zinchenko
 
 // 1. Общие настройки
 ini_set('display_errors',1);

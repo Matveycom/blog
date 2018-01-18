@@ -14,7 +14,8 @@ class Router
     private function getURI()
     {
         if (!empty($_SERVER['REQUEST_URI'])) {
-            return str_replace('/magaz/', '', $_SERVER['REQUEST_URI']);
+            return substr($_SERVER['REQUEST_URI'], 1);
+//            return $_SERVER['REQUEST_URI'];
         }
     }
 

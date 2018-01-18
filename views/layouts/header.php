@@ -2,112 +2,21 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <meta name="author" content="">
         <title>Главная</title>
-        
-        <link href="/../magaz/template/css/bootstrap.min.css" rel="stylesheet">
-        <link href="/../magaz/template/css/font-awesome.min.css" rel="stylesheet">
-        <link href="/../magaz/template/css/prettyPhoto.css" rel="stylesheet">
-        <link href="/../magaz/template/css/price-range.css" rel="stylesheet">
-        <link href="/../magaz/template/css/animate.css" rel="stylesheet">
-        <link href="/../magaz/template/css/main.css" rel="stylesheet">
-        <link href="/../magaz/template/css/responsive.css" rel="stylesheet">
-        <!--[if lt IE 9]>
-        <script src="js/html5shiv.js"></script>
-        <script src="js/respond.min.js"></script>
-        <![endif]-->       
-        <link rel="shortcut icon" href="/../magaz/template/images/ico/favicon.ico">
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/../magaz/template/images/ico/apple-touch-icon-144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/../magaz/template/images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/../magaz/template/images/ico/apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="/../magaz/template/images/ico/apple-touch-icon-57-precomposed.png">
+        <link href="/template/css/style.css" rel="stylesheet">
     </head><!--/head-->
 
     <body>
+    <div class="wrapper">
+        <div class="content">
         <header id="header"><!--header-->
-            <div class="header_top"><!--header_top-->
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="contactinfo">
-                                <ul class="nav nav-pills">
-                                    <li><a href="#"><i class="fa fa-phone"></i> +38 093 000 11 22</a></li>
-                                    <li><a href="#"><i class="fa fa-envelope"></i> zinchenko.us@gmail.com</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="social-icons pull-right">
-                                <ul class="nav navbar-nav">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!--/header_top-->
+            <a href="/" class="main"><h3>Главная</h3></a><br>
 
-            <div class="header-middle"><!--header-middle-->
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="logo pull-left">
-                                <a href="index.html"><img src="/../magaz/template/images/home/logo.png" alt="" /></a>
-                            </div>
-                        </div>
-                        <div class="col-sm-8">
-                            <div class="shop-menu pull-right">
-                                <ul class="nav navbar-nav">                                    
-                                    <li><a href="/magaz/cart/">
-                                            <i class="fa fa-shopping-cart"></i> Корзина
-                                            <span id="cart-count">(<?php echo Cart::countItems(); ?>)</span>
-                                        </a>
-                                    </li>
-                                    <?php if (User::isGuest()): ?>
-                                    <li><a href="/magaz/user/login/"><i class="fa fa-lock"></i> Вход</a></li>
-                                    <?php else: ?>
-                                    <li><a href="/magaz/cabinet/"><i class="fa fa-user"></i> Аккаунт</a></li>
-                                    <li><a href="/magaz/user/logout/"><i class="fa fa-unlock"></i> Выход</a></li>
-                                    <?php endif ?>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!--/header-middle-->
-
-            <div class="header-bottom"><!--header-bottom-->
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="navbar-header">
-                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                            </div>
-                            <div class="mainmenu pull-left">
-                                <ul class="nav navbar-nav collapse navbar-collapse">
-                                    <li><a href="/magaz/">Главная</a></li>
-                                    <li class="dropdown"><a href="#">Магазин<i class="fa fa-angle-down"></i></a>
-                                        <ul role="menu" class="sub-menu">
-                                            <li><a href="/magaz/catalog/">Каталог товаров</a></li>
-                                            <li><a href="/magaz/cart/">Корзина</a></li>
-                                        </ul>
-                                    </li> 
-                                    <li><a href="/magaz/blog/">Блог</a></li>
-                                    <li><a href="/magaz/about/">О магазине</a></li>
-                                    <li><a href="/magaz/contacts/">Контакты</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!--/header-bottom-->
-            
+            <?php if (User::isGuest()): ?>
+                <a href="/user/login/"><i class="cabinet login">Вход</i></a><br>
+                <a href="/user/register/"><i class="cabinet register">Регистрация</i></a><br>
+            <?php else: ?>
+                <a href="/cabinet/"><i class="cabinet account">Аккаунт</i></a><br>
+                <a href="/user/logout/"><i class="cabinet logout">Выход</i></a><br>
+            <?php endif ?>
         </header><!--/header-->

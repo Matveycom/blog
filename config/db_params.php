@@ -2,7 +2,7 @@
 
 return array(
     'host' => 'localhost',
-    'dbname' => 'super_mag',
+    'dbname' => 'blog',
     'user' => 'root',
     'password' => '159',
 );
